@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/LandingPage.css';
 import '../styles/animations.css';
-import HeroSection from '../components/HeroSection';
-import InfoSection from '../components/InfoSection';
-import ReviewsSection from '../components/ReviewsSection';
-import DownloadSection from '../components/DownloadSection';
-import Footer from '../components/Footer';
+import HeroSection from '../components/landing/HeroSection';
+import InfoSection from '../components/landing/InfoSection';
+import ReviewsSection from '../components/landing/ReviewsSection';
+import DownloadSection from '../components/landing/DownloadSection';
+import Footer from '../components/landing/Footer';
 
 const LandingPage = () => {
   return (

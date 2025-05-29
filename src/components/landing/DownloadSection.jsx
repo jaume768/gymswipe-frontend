@@ -1,9 +1,9 @@
 import React from 'react';
-import './DownloadSection.css';
-import appStoreButton from '../assets/app_store_button.png';
-import googlePlayButton from '../assets/google_play_button.png';
-import movilImage from '../assets/movil.png';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import './styles/DownloadSection.css';
+import appStoreButton from '../../assets/app_store_button.png';
+import googlePlayButton from '../../assets/google_play_button.png';
+import movilImage from '../../assets/movil.png';
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
 const DownloadSection = () => {
   const [sectionRef, isSectionVisible] = useIntersectionObserver({

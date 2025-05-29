@@ -1,6 +1,6 @@
 import React from 'react';
-import './ReviewsSection.css';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import './styles/ReviewsSection.css';
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
 const ReviewsSection = () => {
   const [sectionRef, isSectionVisible] = useIntersectionObserver({

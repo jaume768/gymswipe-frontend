@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './HeroSection.css';
-import logoIcon from '../assets/icono.png';
-import { scrollToSection } from '../utils/scrollUtils';
-import { enableBodyScroll, disableBodyScroll } from '../utils/bodyScrollLock';
+import './styles/HeroSection.css';
+import logoIcon from '../../assets/icono.png';
+import { scrollToSection } from '../../utils/scrollUtils';
+import { enableBodyScroll, disableBodyScroll } from '../../utils/bodyScrollLock';
 
 const HeroSection = () => {
   const [menuOpen, setMenuOpen] = useState(false);

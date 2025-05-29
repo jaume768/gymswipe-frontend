@@ -1,6 +1,6 @@
 import React from 'react';
-import './Footer.css';
-import logoIcon from '../assets/icono.png';
+import './styles/Footer.css';
+import logoIcon from '../../assets/icono.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

@@ -1,7 +1,7 @@
 import React from 'react';
-import './InfoSection.css';
-import welcomeImage from '../assets/welcome_bg.webp';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import './styles/InfoSection.css';
+import welcomeImage from '../../assets/welcome_bg.webp';
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
 const InfoSection = () => {
   const [sectionRef, isSectionVisible] = useIntersectionObserver({

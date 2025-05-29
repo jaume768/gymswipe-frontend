@@ -1,0 +1,20 @@
+# Directorios y archivos a ignorar durante la construcción de la imagen Docker
+node_modules
+npm-debug.log
+.git
+.github
+.gitignore
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.log
+.vscode
+.idea
+dist
+*.md
+*.log
+*.swp
+.DS_Store
+Thumbs.db
