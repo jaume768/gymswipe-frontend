@@ -1,0 +1,189 @@
+.download-section {
+  background-color: var(--background-dark);
+  color: var(--text-white);
+  padding: 80px 0;
+}
+
+.download-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.download-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.download-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  /* menos espacio */
+  letter-spacing: -0.5px;
+}
+
+.download-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  /* ajustado */
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.download-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.store-button {
+  transition: transform 0.3s ease;
+  max-width: 200px;
+}
+
+.store-button:hover {
+  transform: translateY(-5px);
+}
+
+.store-image {
+  width: 100%;
+  height: auto;
+}
+
+/* === NUEVOS ESTILOS PARA EL PANEL DE iPHONE === */
+
+.iphone-instructions {
+  background: linear-gradient(135deg,
+      #420b6f 0%,
+      #e40016 40%,
+      #cf005b 70%,
+      #a400d3 100%);
+  border-radius: 40px;
+  /* más redondeado */
+  padding: 20px 30px;
+  width: 29em;
+  /* menos padding vertical, un poco más horizontal */
+  margin: auto;
+  color: #fff;
+}
+
+/* Título: centrado y con menos margen */
+.instructions-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  /* margen inferior reducido */
+  text-align: center;
+}
+
+/* Lista: números pegados al texto, sin indent */
+.instructions-list {
+  margin-left: 1em;
+  /* margen inferior pequeño */
+  padding: 0;
+  text-align: left;
+  list-style-position: inside;
+}
+
+.instructions-list li {
+  margin-bottom: 5px;
+  /* separación mínima */
+  font-size: 1.1rem;
+  line-height: 1.4;
+  /* interlineado un poco más apretado */
+}
+
+/* Nota final: sin cursiva, centrada y con margen reducido */
+.instructions-note {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-style: normal;
+  text-align: center;
+  margin: 0;
+}
+
+/* === Estilos para la vista del móvil === */
+
+.mobile-preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+
+.mobile-image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+}
+
+/* === Responsive === */
+
+@media (max-width: 1024px) {
+  .download-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .download-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .download-section {
+    padding: 60px 0;
+  }
+
+  .download-title {
+    font-size: 3rem;
+  }
+
+  .download-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .instructions-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .download-title {
+    font-size: 2.5rem;
+  }
+
+  .download-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .store-button {
+    max-width: 150px;
+  }
+
+  .iphone-instructions {
+    padding: 15px 20px;
+    border-radius: 30px;
+    width: 100%;
+  }
+
+  .instructions-title {
+    font-size: 1.5rem;
+  }
+
+  .instructions-list li,
+  .instructions-note {
+    font-size: 1rem;
+  }
+}

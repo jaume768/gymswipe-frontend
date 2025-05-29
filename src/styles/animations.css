@@ -1,0 +1,82 @@
+/* Animaciones para las secciones cuando aparecen en el viewport */
+
+/* Clase base para elementos no visibles */
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Clase para aplicar cuando el elemento es visible */
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variaciones de animaciones para diferentes secciones */
+.animate-fade-in {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.animate-fade-in.visible {
+  opacity: 1;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(-70px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(70px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animación con delay para elementos secuenciales */
+.animate-delay-200 {
+  transition-delay: 200ms;
+}
+
+.animate-delay-400 {
+  transition-delay: 400ms;
+}
+
+.animate-delay-600 {
+  transition-delay: 600ms;
+}
+
+/* Animación de zoom para las secciones */
+.animate-zoom {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-zoom.visible {
+  opacity: 1;
+  transform: scale(1);
+}

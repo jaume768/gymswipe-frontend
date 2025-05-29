@@ -1,0 +1,141 @@
+.reviews-section {
+  background-color: var(--background-dark);
+  color: var(--text-white);
+  padding: 80px 0;
+  width: 100%;
+}
+
+.reviews-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.reviews-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.review-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar-container {
+  margin-right: 15px;
+}
+
+.avatar-placeholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Colores diferentes para cada avatar */
+.review-card:nth-child(1) .avatar-placeholder {
+  background: linear-gradient(145deg, #e40016, #cf005b);
+}
+
+.review-card:nth-child(2) .avatar-placeholder {
+  background: linear-gradient(145deg, #420b6f, #a400d3);
+}
+
+.reviewer-info {
+  flex: 1;
+}
+
+.reviewer-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.reviewer-rating {
+  display: flex;
+}
+
+.star {
+  color: #ffdd00;
+  margin-right: 2px;
+}
+
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.review-date {
+  align-self: flex-end;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .reviews-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .reviews-container {
+    padding: 0 20px;
+  }
+  
+  .review-card {
+    padding: 25px;
+  }
+  
+  .review-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews-section {
+    padding: 60px 0;
+  }
+  
+  .reviews-title {
+    font-size: 2rem;
+  }
+}

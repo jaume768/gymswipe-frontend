@@ -1,0 +1,153 @@
+/* Estilos para la sección de información */
+.info-section {
+  background-color: var(--background-dark);
+  color: var(--text-white);
+  padding: 80px 0;
+  width: 100%;
+}
+
+/* GRID de 2 columnas x 2 filas */
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* La tarjeta de texto ocupa col 1 y filas 1–2 */
+.info-text {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  background-color: var(--card-dark);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.info-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.info-description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+
+/* Imagen en col 2, fila 1 */
+.info-image-container {
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.info-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Feature-card en col 2, fila 2 */
+.feature-card {
+  grid-column: 2;
+  grid-row: 2;
+  background: linear-gradient(
+    135deg,
+    #420b6f 0%,
+    #e40016 40%,
+    #cf005b 70%,
+    #a400d3 100%
+  );
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  justify-self: end;
+}
+
+.feature-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.feature-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 0 20px;
+  }
+
+  .info-text,
+  .info-image-container,
+  .feature-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100%;
+  }
+
+  .info-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-section {
+    padding: 60px 0;
+  }
+
+  .info-title {
+    font-size: 2.5rem;
+  }
+
+  .feature-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .info-container {
+    padding: 0 20px;
+  }
+
+  .info-text {
+    padding: 30px;
+  }
+
+  .info-title {
+    font-size: 2rem;
+  }
+
+  .info-description,
+  .feature-description {
+    font-size: 1rem;
+  }
+
+  .feature-card {
+    padding: 30px;
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+  }
+}
