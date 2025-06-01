@@ -1,0 +1,245 @@
+@import '../../styles/variables.css';
+
+.single-user-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--background-dark);
+  color: white;
+  touch-action: manipulation;
+}
+
+.user-photos-container {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+
+.user-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.user-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+  font-size: 3rem;
+  color: white;
+}
+
+.photo-nav {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.photo-nav:hover {
+  opacity: 0.7;
+}
+
+.photo-nav-left {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent);
+}
+
+.photo-nav-right {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), transparent);
+}
+
+.photo-nav span {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.photo-indicators {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 10;
+}
+
+.photo-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.photo-indicator.active {
+  width: 14px;
+  height: 14px;
+  background-color: white;
+}
+
+.user-header {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 10;
+}
+
+.username {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.user-goal {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.goal-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.goal-icon {
+  margin-right: 5px;
+}
+
+.user-info {
+  position: absolute;
+  bottom: 80px;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.biography {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.location-icon {
+  margin-right: 5px;
+}
+
+.heart-animation {
+  position: absolute;
+  z-index: 100;
+  font-size: 80px;
+  transform: translate(-50%, -50%);
+  animation: heartbeat 0.8s ease-out;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+.single-user-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0e0a23;
+  color: white;
+  font-size: 18px;
+}
+
+
+
+.single-user-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0e0a23;
+  color: white;
+  font-size: 18px;
+}
+
+/* Estilos responsivos */
+@media (min-width: 768px) {
+  .username {
+    font-size: 36px;
+  }
+  
+  .biography {
+    font-size: 20px;
+  }
+  
+  .location {
+    font-size: 18px;
+  }
+  
+  .goal-badge {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .single-user-container {
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .photo-container {
+    border-radius: 15px;
+  }
+  
+  .heart-animation {
+    font-size: 100px;
+  }
+}

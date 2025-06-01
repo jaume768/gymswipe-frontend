@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './styles/HeroSection.css';
 import logoIcon from '../../assets/icono.png';
 import { scrollToSection } from '../../utils/scrollUtils';
@@ -6,6 +7,7 @@ import { enableBodyScroll, disableBodyScroll } from '../../utils/bodyScrollLock'
 
 const HeroSection = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
   
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -13,6 +15,10 @@ const HeroSection = () => {
   
   const closeMenu = () => {
     setMenuOpen(false);
+  };
+  
+  const handleLoginClick = () => {
+    navigate('/login');
   };
   
   // Manejar el bloqueo del scroll cuando el menú está abierto
@@ -81,6 +87,7 @@ const HeroSection = () => {
               estilo de vida.
             </h1>
             <button className="cta-button">Crear Cuenta</button>
+            <button className="login-button-hero" onClick={handleLoginClick}>Iniciar sesión</button>
           </div>
         </div>
       </div>

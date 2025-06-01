@@ -1,0 +1,24 @@
+:root {
+  /* Colores principales */
+  --background-dark: #0a0817; /* Fondo oscuro, negro azulado */
+  --card-dark: #19162e; /* Color para tarjetas oscuras */
+  --text-white: #ffffff; /* Texto blanco */
+  --accent-color: #ff4b5c; /* Color de acento para botones, elementos destacados */
+  --gradient-purple-start: #8423df; /* Inicio del gradiente morado */
+  --gradient-purple-end: #ff45a4; /* Fin del gradiente rosa */
+  
+  /* Variables específicas para login */
+  --login-background: #000000; /* Fondo negro puro para login */
+  --input-background: rgba(255, 255, 255, 0.05); /* Fondo semi-transparente para inputs */
+  --input-border: rgba(255, 255, 255, 0.2); /* Borde semi-transparente para inputs */
+  --button-white: #ffffff; /* Color para el botón de iniciar sesión */
+  --button-black: #000000; /* Color para el texto del botón */
+  --google-button-border: rgba(255, 255, 255, 0.2); /* Borde para el botón de Google */
+  
+  /* Tipografía */
+  --font-family-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  /* Breakpoints */
+  --mobile-width: 640px;
+  --tablet-width: 1024px;
+}

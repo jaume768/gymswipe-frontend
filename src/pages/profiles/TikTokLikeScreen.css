@@ -1,0 +1,308 @@
+@import '../../styles/variables.css';
+
+.tiktok-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-dark);
+  color: white;
+  overflow: hidden;
+}
+
+/* Barra superior */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  z-index: 10;
+}
+
+.mode-tabs {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 3px;
+}
+
+.mode-tab {
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-tab.active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.filter-button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  backdrop-filter: blur(5px);
+}
+
+.report-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  backdrop-filter: blur(5px);
+  z-index: 100;
+  transition: all 0.2s ease;
+}
+
+.report-button:hover {
+  background: rgba(255, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+/* Contenedor principal de perfiles */
+.profiles-container {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Controles de navegación vertical */
+.swipe-controls {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 5;
+}
+
+.swipe-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
+}
+
+.swipe-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.swipe-button:not(:disabled):hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+/* Nombre de usuario en la parte inferior */
+.username-tag {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 5px 15px;
+  border-radius: 20px;
+  z-index: 5;
+}
+
+.username-tag h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Estados de pantalla */
+.tiktok-screen.loading {
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--accent-color);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.no-profiles {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.no-profiles button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.no-profiles button:hover {
+  transform: scale(1.05);
+  background-color: var(--accent-color-dark);
+}
+
+/* Modal de reporte */
+.report-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.report-modal-content {
+  background-color: var(--background-light);
+  border-radius: 15px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.report-modal-content h3 {
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+
+.report-modal-content select,
+.report-modal-content textarea {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+}
+
+.report-modal-content textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.report-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.report-modal-buttons button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.report-modal-buttons button:first-child {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.report-modal-buttons button:last-child {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.report-modal-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos responsivos */
+@media (min-width: 768px) {
+  .tiktok-screen {
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    height: 90vh;
+    margin-top: 5vh;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .top-bar {
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+/* Animaciones */
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
